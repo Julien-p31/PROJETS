@@ -1,7 +1,6 @@
-# my-awesome-project
+# website-flow
 
-This awesome project is created to experiment git notions like clone, push and pull.
+1 - Gouda
+2 - Emmental
+3 - Chèvre
 
-## Achievements
-
-J'ai réussi à faire clone, pull et je m'apprête à faire push.
