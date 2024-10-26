@@ -15,6 +15,7 @@ while true; do
     echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
     read choix
 
+    # Case pour choix installation ou désinstallation logiciel
     case $choix in 
         1)
             echo -e "${GREEN}Entrer le nom du logiciel à installer : ${NC}"
@@ -25,11 +26,13 @@ while true; do
             echo -e "${GREEN}Entrer le nom du logiciel à désinstaller : ${NC}"
             read logiciel
             sudo apt remove $logiciel -y
-            ;;
+          ;;
+	# Sortir du script 
         3)
             echo "Exit"
             break
             ;;
+	# Inique si erreur de saisie et relance le script    
         *)
             echo -e "${RED}[Erreur]! Option invalide, veuillez réessayer !${NC}"
             ;;
