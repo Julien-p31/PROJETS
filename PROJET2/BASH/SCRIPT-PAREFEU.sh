@@ -32,7 +32,7 @@ while true; do
     
     case $choix_regles in
 
-    		1)
+    		1)      # Règles de pare-feu
                         echo -e "${GREEN}Entrer la règle à ajouter (ex: allow 22/tcp) : ${NC}"
                         read regle
                         sudo ufw $regle
