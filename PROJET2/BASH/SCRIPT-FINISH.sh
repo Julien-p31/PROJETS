@@ -65,8 +65,10 @@ function gestion_pare_feu() {
                 if [ $oui = "oui" ]; then
                     sudo ufw enable
                     echo "Le pare-feu a bien été activé."
-                else
+                elif [ $oui = "non" ]; then
                     echo "Le pare-feu n'a pas été activé."
+                else
+                    echo -e "${RED} [ERREUR] ! Option invalide, veuillez réessayer !${NC}"
                 fi
                 ;;
             3)
@@ -75,8 +77,10 @@ function gestion_pare_feu() {
                 if [ $oui = "oui" ]; then
                     sudo ufw disable
                     echo "Le pare-feu a bien été désactivé."
-                else
+                elif [ $oui = "non" ]; then
                     echo "Le pare-feu n'a pas été désactivé."
+                else
+                    echo -e "${RED} [ERREUR] ! Option invalide, veuillez réessayer !${NC}"
                 fi
                 ;;
             4)
