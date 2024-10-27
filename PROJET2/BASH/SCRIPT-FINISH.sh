@@ -197,7 +197,7 @@ while true; do
     echo -e "${YELLOW}MENU PRINCIPAL :"
     echo -e "${GREEN}1) Gestion Pare-Feu"
     echo -e "${GREEN}2) Gestion Logiciel"
-    echo -e "${GREEN}3) Informations Système"
+    echo -e "${GREEN}3) Information Système"
     echo -e "${GREEN}4) Connexion Client"
     echo -e "${GREEN}5) Quitter"
     echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
