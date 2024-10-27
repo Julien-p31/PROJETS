@@ -6,7 +6,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # Aucune couleur
 
-# Boucle while true
+# Boucle while true pour la gestion de pare-feu
 while true; do
     echo -e "${YELLOW}MENU GESTION PARE-FEU :"
     echo -e "${GREEN}1) Définir les règles de pare-feu"
@@ -19,7 +19,7 @@ while true; do
     case $choix in 
         
          
-         # Boucle while true 
+         # Boucle while true pour les règles de pare-feu
          1) 
 while true; do
     echo -e "${YELLOW}MENU DES RÈGLES PARE-FEU :"
