@@ -22,7 +22,7 @@ while true; do
          # Boucle while true 
          1) 
 while true; do
-    echo -e "${YELLOW}MENU GESTION DES RÈGLES PARE-FEU :"
+    echo -e "${YELLOW}MENU DES RÈGLES PARE-FEU :"
     echo -e "${GREEN}1) Ajouter une règle"
     echo -e "${GREEN}2) Supprimer une règle"
     echo -e "${GREEN}3) Afficher les règles actuelles"
