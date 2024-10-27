@@ -6,7 +6,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # Aucune couleur
 
-# Boucle while true
+# Boucle while true pour les informations systèmes
 while true; do
     echo -e "${YELLOW}MENU INFORMATION SYSTEME :"
     echo -e "${GREEN}1) Type de CPU, nombre de coeurs, etc.."
