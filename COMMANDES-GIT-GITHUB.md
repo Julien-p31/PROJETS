@@ -1,6 +1,4 @@
-# Documentation des Commandes Git / GitHub
-
-## Initialisation et Configuration
+# Initialisation et Configuration
 
 - **`git init`** : Initialise un nouveau dépôt Git dans le dossier courant.
 - **`git clone <url>`** : Clone un dépôt distant (GitHub par ex.) dans le dossier courant.
