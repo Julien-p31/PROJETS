@@ -1,62 +1,51 @@
-# Documentation : Commandes et Scripting en Bash sous Linux
+# Boucles et Conditions pour Script Bash
 
-## 1. Commandes Bash de base
+## Conditions en Bash  
+**Syntaxe de base des conditions**  
+`if [ condition ]; then`  
+&nbsp;&nbsp;`# instructions si condition est vraie`  
+`elif [ autre_condition ]; then`  
+&nbsp;&nbsp;`# instructions si autre_condition est vraie`  
+`else`  
+&nbsp;&nbsp;`# instructions si aucune condition n'est vraie`  
+`fi`  
 
-### 1.1 Commandes de navigation et de gestion des fichiers  
-- **`pwd`** : Affiche le répertoire de travail actuel.  
-- **`ls [OPTIONS] [CHEMIN]`** : Liste les fichiers et dossiers.  
-  - `-l` : Mode liste détaillée.  
-  - `-a` : Affiche tous les fichiers, y compris les fichiers cachés.  
-  - `-h` : Affiche la taille des fichiers dans un format lisible.  
-  - `-R` : Affiche le contenu des sous-dossiers de façon récursive.  
-- **`cd [CHEMIN]`** : Change de répertoire.  
-  - `cd -` : Retourne au dernier répertoire visité.  
-- **`mkdir [OPTIONS] <NOM_DOSSIER>`** : Crée un nouveau dossier.  
-  - `-p` : Crée les dossiers parents si nécessaires.  
-- **`rmdir [OPTIONS] <NOM_DOSSIER>`** : Supprime un dossier vide.  
-  - `--ignore-fail-on-non-empty` : Ignore les erreurs si le dossier n’est pas vide.  
-- **`rm [OPTIONS] <FICHIER>`** : Supprime un fichier.  
-  - `-r` : Supprime de façon récursive.  
-  - `-f` : Force la suppression sans confirmation.  
-- **`cp [OPTIONS] <SOURCE> <DESTINATION>`** : Copie un fichier ou dossier.  
-  - `-r` : Copie les dossiers de façon récursive.  
-  - `-u` : Copie seulement si la source est plus récente que la destination.  
-- **`mv [OPTIONS] <SOURCE> <DESTINATION>`** : Déplace ou renomme un fichier ou dossier.  
-  - `-i` : Demande confirmation avant de remplacer un fichier.  
-- **`touch [OPTIONS] <NOM_FICHIER>`** : Crée un fichier vide ou met à jour la date de modification.  
-  - `-a` : Modifie uniquement la date d’accès.  
-  - `-m` : Modifie uniquement la date de modification.  
+**Exemples de conditions courantes**  
+- `-f <fichier>` : Vérifie si un fichier existe.  
+- `-d <dossier>` : Vérifie si un dossier existe.  
+- `-z <variable>` : Vérifie si la variable est vide.  
+- `-n <variable>` : Vérifie si la variable n’est pas vide.  
+- Comparaisons numériques :  
+&nbsp;&nbsp;- `-lt` : inférieur  
+&nbsp;&nbsp;- `-le` : inférieur ou égal  
+&nbsp;&nbsp;- `-gt` : supérieur  
+&nbsp;&nbsp;- `-ge` : supérieur ou égal  
+&nbsp;&nbsp;- `-eq` : égal  
+&nbsp;&nbsp;- `-ne` : différent  
 
-### 1.2 Commandes d’affichage du contenu de fichiers  
-- **`cat [OPTIONS] <FICHIER>`** : Affiche le contenu d’un fichier.  
-  - `-n` : Numérote les lignes.  
-  - `-E` : Affiche les symboles de fin de ligne (`$`).  
-- **`head [OPTIONS] <FICHIER>`** : Affiche les premières lignes d’un fichier.  
-  - `-n <N>` : Affiche les `<N>` premières lignes.  
-- **`tail [OPTIONS] <FICHIER>`** : Affiche les dernières lignes d’un fichier.  
-  - `-n <N>` : Affiche les `<N>` dernières lignes.  
-  - `-f` : Suit le fichier en temps réel (utile pour les logs).  
-- **`less [OPTIONS] <FICHIER>`** : Affiche le contenu d'un fichier page par page.  
-  - `-N` : Affiche les numéros de ligne.  
-  - `/motif` : Recherche un motif dans le fichier.  
+## Boucles en Bash  
+**Boucle For**  
+`for i in {1..5}; do`  
+&nbsp;&nbsp;`echo $i`  
+`done`  
 
----
+**Boucle While**  
+`while [ condition ]; do`  
+&nbsp;&nbsp;`# instructions exécutées tant que condition est vraie`  
+`done`  
 
-## 2. Scripting Bash : Variables, Conditions et Boucles
+**Boucle Until**  
+`until [ condition ]; do`  
+&nbsp;&nbsp;`# instructions exécutées tant que condition est fausse`  
+`done`  
 
-### 2.1 Variables  
-- **Déclaration d’une variable** : `variable="valeur"`.  
-- **Afficher une variable** : `echo $variable`.  
-- **Lire une entrée utilisateur** : `read variable`.  
-- **Export d’une variable** : `export variable`.  
+**Boucle For avec liste**  
+`for element in "valeur1" "valeur2" "valeur3"; do`  
+&nbsp;&nbsp;`echo $element`  
+`done`  
 
-### 2.2 Conditions  
-- **Syntaxe de base** :  
-  ```bash
-  if [ condition ]; then
-    # instructions
-  elif [ autre_condition ]; then
-    # instructions
-  else
-    # instructions
-  fi
+**Boucle For avec un tableau**  
+`tableau=("valeur1" "valeur2" "valeur3")`  
+`for element in "${tableau[@]}"; do`  
+&nbsp;&nbsp;`echo $element`  
+`done`  
