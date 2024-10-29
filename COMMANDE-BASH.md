@@ -191,8 +191,3 @@
 - **`alias <NOM>='<COMMANDE>'`** : Crée un alias pour une commande.
   - Exemple : `alias ll='ls -la'`
 - **`unset <VARIABLE>`** : Supprime une variable ou un alias.
-
----
-
-## Conclusion
-Ce guide regroupe les commandes et options essentielles en Bash sous Linux, utile pour la navigation et la gestion des systèmes.
