@@ -12,7 +12,7 @@ PASSWORD="Azerty1*"
 # Fonction pour la gestion de pare-feu
 function gestion_pare_feu() {
     while true; do
-        echo -e "${GREEN}------ MENU GESTION PARE-FEU ------\n"
+        echo -e "${GREEN}------ MENU GESTION PARE-FEU ------"
         echo -e "${GREEN}[1]${NC} Définir les règles de pare-feu"
         echo -e "${GREEN}[2]${NC} Activer le pare-feu"
         echo -e "${GREEN}[3]${NC} Désactiver le pare-feu"
@@ -24,7 +24,7 @@ function gestion_pare_feu() {
             1)
                 # Sous-menu pour les règles de pare-feu
                 while true; do
-                    echo -e "${GREEN}------ MENU DES RÈGLES PARE-FEU ------\n"
+                    echo -e "${GREEN}------ MENU DES RÈGLES PARE-FEU ------"
                     echo -e "${GREEN}[1]${NC} Ajouter une règle"
                     echo -e "${GREEN}[2]${NC} Supprimer une règle"
                     echo -e "${GREEN}[3]${NC} Afficher les règles actuelles"
@@ -111,7 +111,7 @@ function gestion_pare_feu() {
 # Fonction pour la gestion de logiciel
 function gestion_logiciel() {
     while true; do
-        echo -e "${GREEN}------ MENU GESTION LOGICIEL ------\n"
+        echo -e "${GREEN}------ MENU GESTION LOGICIEL ------"
         echo -e "${GREEN}[1]${NC} Installer un logiciel"
         echo -e "${GREEN}[2]${NC} Désinstaller un logiciel"
         echo -e "${GREEN}[3]${NC} Retour au menu principal"
@@ -208,7 +208,7 @@ function connexion_client() {
 
 # Menu principal
 while true; do
-    echo -e "${GREEN}------ MENU PRINCIPAL ------\n"
+    echo -e "${GREEN}------ MENU PRINCIPAL ------"
     echo -e "${GREEN}[1]${NC} Gestion Pare-Feu"
     echo -e "${GREEN}[2]${NC} Gestion Logiciel"
     echo -e "${GREEN}[3]${NC} Information Système"
