@@ -12,24 +12,24 @@ PASSWORD="Azerty1*"
 # Fonction pour la gestion de pare-feu
 function gestion_pare_feu() {
     while true; do
-        echo -e "${YELLOW}MENU GESTION PARE-FEU :"
-        echo -e "${GREEN}1) Définir les règles de pare-feu"
-        echo -e "${GREEN}2) Activer le pare-feu"
-        echo -e "${GREEN}3) Désactiver le pare-feu"
-        echo -e "${GREEN}4) Retour au menu principal"
-        echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
+        echo -e "${GREEN}------ MENU GESTION PARE-FEU ------\n"
+        echo -e "${GREEN}[1]${NC} Définir les règles de pare-feu"
+        echo -e "${GREEN}[2]${NC} Activer le pare-feu"
+        echo -e "${GREEN}[3]${NC} Désactiver le pare-feu"
+        echo -e "${GREEN}[4]${NC} Retour au menu principal"
+        echo -e "${GREEN}Veuillez choisir une option : ${NC}"
         read choix
 
         case $choix in 
             1)
                 # Sous-menu pour les règles de pare-feu
                 while true; do
-                    echo -e "${YELLOW}MENU DES RÈGLES PARE-FEU :"
-                    echo -e "${GREEN}1) Ajouter une règle"
-                    echo -e "${GREEN}2) Supprimer une règle"
-                    echo -e "${GREEN}3) Afficher les règles actuelles"
-                    echo -e "${GREEN}4) Retour au menu précédent"
-                    echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
+                    echo -e "${GREEN}------ MENU DES RÈGLES PARE-FEU ------\n"
+                    echo -e "${GREEN}[1]${NC} Ajouter une règle"
+                    echo -e "${GREEN}[2]${NC} Supprimer une règle"
+                    echo -e "${GREEN}[3]${NC} Afficher les règles actuelles"
+                    echo -e "${GREEN}[4]${NC} Retour au menu précédent"
+                    echo -e "${GREEN}Veuillez choisir une option : ${NC}"
                     read choix_regles
 
                     case $choix_regles in
@@ -98,7 +98,7 @@ function gestion_pare_feu() {
                 fi
                 ;;
             4)
-                echo "Retour au menu principal."
+                echo -e "${YELLOW}Retour au menu principal.${NC}"
                 break
                 ;;
             *)
@@ -111,11 +111,11 @@ function gestion_pare_feu() {
 # Fonction pour la gestion de logiciel
 function gestion_logiciel() {
     while true; do
-        echo -e "${YELLOW}MENU GESTION LOGICIEL :"
-        echo -e "${GREEN}1) Installer un logiciel"
-        echo -e "${GREEN}2) Désinstaller un logiciel"
-        echo -e "${GREEN}3) Retour au menu principal"
-        echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
+        echo -e "${GREEN}------ MENU GESTION LOGICIEL ------\n"
+        echo -e "${GREEN}[1]${NC} Installer un logiciel"
+        echo -e "${GREEN}[2]${NC} Désinstaller un logiciel"
+        echo -e "${GREEN}[3]${NC} Retour au menu principal"
+        echo -e "${GREEN}Veuillez choisir une option : ${NC}"
         read choix
 
         case $choix in 
@@ -130,7 +130,7 @@ function gestion_logiciel() {
                 sudo apt remove $logiciel -y
                 ;;
             3)
-                echo "Retour au menu principal."
+                echo -e "${YELLOW}Retour au menu principal.${NC}"
                 break
                 ;;
             *)
@@ -143,14 +143,14 @@ function gestion_logiciel() {
 # Fonction pour les informations système
 function information_systeme() {
     while true; do
-        echo -e "${YELLOW}MENU INFORMATION SYSTEME :"
-        echo -e "${GREEN}1) Type de CPU, nombre de coeurs, etc.."
-        echo -e "${GREEN}2) Mémoire RAM totale"
-        echo -e "${GREEN}3) Utilisation de la RAM"
-        echo -e "${GREEN}4) Utilisation du disque"
-        echo -e "${GREEN}5) Utilisation du processeur"
-        echo -e "${GREEN}6) Retour au menu principal"
-        echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
+        echo -e "${GREEN}------ MENU INFORMATION SYSTEME ------\n"
+        echo -e "${GREEN}[1]${NC} Type de CPU, nombre de coeurs, etc.."
+        echo -e "${GREEN}[2]${NC} Mémoire RAM totale"
+        echo -e "${GREEN}[3]${NC} Utilisation de la RAM"
+        echo -e "${GREEN}[4]${NC} Utilisation du disque"
+        echo -e "${GREEN}[5]${NC} Utilisation du processeur"
+        echo -e "${GREEN}[6]${NC} Retour au menu principal"
+        echo -e "${GREEN}Veuillez choisir une option : ${NC}"
         read choix
 
         case $choix in
@@ -170,7 +170,7 @@ function information_systeme() {
                 top
                 ;;
             6)
-                echo "Retour au menu principal."
+                echo -e "${YELLOW}Retour au menu principal.${NC}"
                 break
                 ;;
             *)
@@ -196,7 +196,7 @@ function connexion_client() {
                 sshpass -p "$PASSWORD" ssh wilder@172.16.10.20
                 ;;
             3)
-                echo "Retour au menu principal."
+                echo -e "${YELLOW}Retour au menu principal.${NC}"
                 break
                 ;;
             *)
@@ -208,13 +208,13 @@ function connexion_client() {
 
 # Menu principal
 while true; do
-    echo -e "${YELLOW}MENU PRINCIPAL :"
-    echo -e "${GREEN}1) Gestion Pare-Feu"
-    echo -e "${GREEN}2) Gestion Logiciel"
-    echo -e "${GREEN}3) Information Système"
-    echo -e "${GREEN}4) Connexion Client"
-    echo -e "${GREEN}5) Quitter"
-    echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
+    echo -e "${GREEN}------ MENU PRINCIPAL ------\n"
+    echo -e "${GREEN}[1]${NC} Gestion Pare-Feu"
+    echo -e "${GREEN}[2]${NC} Gestion Logiciel"
+    echo -e "${GREEN}[3]${NC} Information Système"
+    echo -e "${GREEN}[4]${NC} Connexion Client"
+    echo -e "${GREEN}[5]${NC} Quitter"
+    echo -e "${GREEN}Veuillez choisir une option : ${NC}"
     read main_choix
 
     case $main_choix in
@@ -231,7 +231,7 @@ while true; do
             connexion_client
             ;;
         5)
-            echo "Exit"
+            echo "${YELLOW}Exit${NC}"
             break
             ;;
         *)
