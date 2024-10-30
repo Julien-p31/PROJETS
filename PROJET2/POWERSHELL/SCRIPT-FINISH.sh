@@ -10,7 +10,7 @@ NC='\033[0m' # Aucune couleur
 PASSWORD="Azerty1*"
 
 # Fonction pour la gestion de pare-feu
-function gestion_pare_feu() {
+function gestion_pare_feu {
     while true; do
         echo -e "${YELLOW}MENU GESTION PARE-FEU :"
         echo -e "${GREEN}1) Définir les règles de pare-feu"
@@ -38,27 +38,27 @@ function gestion_pare_feu() {
                             read regle
                             sudo ufw $regle
                             echo -e "${GREEN}Règle ajoutée : $regle${NC}"
-                            ;;
+                            }
                         2)
                             echo -e "${GREEN}Entrer la règle à supprimer (ex: allow 22/tcp) : ${NC}"
                             read regle
                             sudo ufw delete $regle
                             echo -e "${GREEN}Règle supprimée : $regle${NC}"
-                            ;;
+                            }
                         3)
                             echo -e "${GREEN}Règles de pare-feu actuelles :${NC}"
                             sudo ufw status
-                            ;;
+                            }
                         4)
                             echo -e "${YELLOW}Retour au menu principal.${NC}"
                             break
-                            ;;
+                            }
                         *)
                             echo -e "${RED}[Erreur]! Option invalide, veuillez réessayer !${NC}"
-                            ;;
-                    esac
-                done
-                ;;
+                            }
+                    }
+                 }
+                }
             2)
                 echo -e "${GREEN}Voulez-vous activer le pare-feu ? : oui/non ${NC}"
                 read oui
@@ -70,7 +70,7 @@ function gestion_pare_feu() {
                 else
                     echo -e "${RED} [ERREUR] ! Option invalide, veuillez réessayer !${NC}"
                 fi
-                ;;
+                }
             3)
                 echo -e "${GREEN}Voulez-vous désactiver le pare-feu ? : oui/non ${NC}"
                 read oui
@@ -82,20 +82,20 @@ function gestion_pare_feu() {
                 else
                     echo -e "${RED} [ERREUR] ! Option invalide, veuillez réessayer !${NC}"
                 fi
-                ;;
+                }
             4)
                 echo "Retour au menu principal."
                 break
-                ;;
+                }
             *)
                 echo -e "${RED}[Erreur]! Option invalide, veuillez réessayer !${NC}"
-                ;;
-        esac
-    done
+                }
+        }
+    }
 }
 
 # Fonction pour la gestion de logiciel
-function gestion_logiciel() {
+function gestion_logiciel {
     while true; do
         echo -e "${YELLOW}MENU GESTION LOGICIEL :"
         echo -e "${GREEN}1) Installer un logiciel"
@@ -161,7 +161,7 @@ function information_systeme() {
                 ;;
             *)
                 echo -e "${RED}[Erreur]! Option invalide, veuillez réessayer !${NC}"
-                ;;
+                }
         esac
     done
 }
@@ -176,18 +176,18 @@ function connexion_client() {
             1)
                 echo "Connexion effectuée !"
                 sshpass -p "$PASSWORD" ssh wilder@172.16.10.30
-                ;;
+                }
             2)
                 echo "Connexion effectuée !"
                 sshpass -p "$PASSWORD" ssh wilder@172.16.10.20
-                ;;
+                }
             3)
                 echo "Retour au menu principal."
                 break
-                ;;
+                }
             *)
                 echo -e "${RED}[Erreur]! Option invalide, veuillez réessayer !${NC}"
-                ;;
+                }
         esac
     done
 }
@@ -206,22 +206,22 @@ while true; do
     case $main_choix in
         1)
             gestion_pare_feu
-            ;;
+            }
         2)
             gestion_logiciel
-            ;;
+            }
         3)
             information_systeme
-            ;;
+            }
         4)
             connexion_client
-            ;;
+            }
         5)
             echo "Exit"
             break
-            ;;
+            }
         *)
             echo -e "${RED}[Erreur]! Option invalide, veuillez réessayer !${NC}"
-            ;;
+            }
     esac
 done
