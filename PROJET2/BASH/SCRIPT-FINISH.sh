@@ -60,27 +60,38 @@ function gestion_pare_feu() {
                 done
                 ;;
             2)
+                # Bloc pour activer le pare-feu
                 echo -e "${GREEN}Voulez-vous activer le pare-feu ? : oui/non ${NC}"
                 read oui
-                if [ $oui = "oui" ]; then
-                    sudo ufw enable
-                    echo "Le pare-feu a bien été activé."
-                elif [ $oui = "non" ]; then
-                    echo "Le pare-feu n'a pas été activé."
+
+                # Tant que l'entrée n'est pas "oui" ou "non", on redemande une saisie valide
+                while [[ "$oui" != "oui" && "$oui" != "non" ]]; do
+                echo -e "${RED}[ERREUR] Option invalide, veuillez entrer 'oui' ou 'non'.${NC}"
+                read oui
+                done
+
+                if [ "$oui" = "oui" ]; then
+                sudo ufw enable
+                echo "Le pare-feu a bien été activé."
                 else
-                    echo -e "${RED} [ERREUR] ! Option invalide, veuillez réessayer !${NC}"
+                echo "Le pare-feu n'a pas été activé."
                 fi
-                ;;
+                ;; 
             3)
                 echo -e "${GREEN}Voulez-vous désactiver le pare-feu ? : oui/non ${NC}"
                 read oui
-                if [ $oui = "oui" ]; then
-                    sudo ufw disable
-                    echo "Le pare-feu a bien été désactivé."
-                elif [ $oui = "non" ]; then
-                    echo "Le pare-feu n'a pas été désactivé."
+
+                # Tant que l'entrée n'est pas "oui" ou "non", on redemande une saisie valide
+                while [[ "$oui" != "oui" && "$oui" != "non" ]]; do
+                echo -e "${RED}[ERREUR] Option invalide, veuillez entrer 'oui' ou 'non'.${NC}"
+                read oui
+                done
+
+                if [ "$oui" = "oui" ]; then
+                sudo ufw disable
+                echo "Le pare-feu a bien été désactivé."
                 else
-                    echo -e "${RED} [ERREUR] ! Option invalide, veuillez réessayer !${NC}"
+                echo "Le pare-feu n'a pas été désactivé."
                 fi
                 ;;
             4)
