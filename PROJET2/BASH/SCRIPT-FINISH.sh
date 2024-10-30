@@ -67,7 +67,7 @@ function gestion_pare_feu() {
                 # Tant que l'entrée n'est pas "oui" ou "non", on redemande une saisie valide
                 while [[ "$oui" != "oui" && "$oui" != "non" ]]; do
                 echo -e "${RED}[ERREUR] Option invalide, veuillez entrer 'oui' ou 'non'.${NC}"
-                read oui
+                read -p "Entrer votre choix : " oui
                 done
 
                 if [ "$oui" = "oui" ]; then
@@ -84,7 +84,7 @@ function gestion_pare_feu() {
                 # Tant que l'entrée n'est pas "oui" ou "non", on redemande une saisie valide
                 while [[ "$oui" != "oui" && "$oui" != "non" ]]; do
                 echo -e "${RED}[ERREUR] Option invalide, veuillez entrer 'oui' ou 'non'.${NC}"
-                read oui
+                read - p "Entrer votre choix : " oui
                 done
 
                 if [ "$oui" = "oui" ]; then
