@@ -8,7 +8,7 @@ NC='\033[0m' # Aucune couleur
 
 # Boucle while true pour faire un menu sur la gestion de logiciel
 while true; do
-    echo -e "${GREEN}------ MENU GESTION LOGICIEL ------"
+    echo -e "${GREEN}------ MENU GESTION LOGICIEL ------`n"
     echo -e "${YELLOW}[1]${NC} Installer un logiciel"
     echo -e "${YELLOW}[2]${NC} Désinstaller un logiciel"
     echo -e "${YELLOW}[3]${NC} Quitter"
