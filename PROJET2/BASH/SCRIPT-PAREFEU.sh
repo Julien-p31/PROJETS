@@ -9,11 +9,11 @@ NC='\033[0m' # Aucune couleur
 # Boucle while true pour faire un menu sur la gestion du pare-feu
 while true; do
     echo -e "${GREEN}------ MENU GESTION PARE-FEU ------"
-    echo -e "${GREEN}[1]${NC} Définir les règles de pare-feu"
-    echo -e "${GREEN}[2]${NC} Activer le pare-feu"
-    echo -e "${GREEN}[3]${NC} Désactiver le pare-feu"
-    echo -e "${GREEN}[4]${NC} Quitter"
-    echo -e "${GREEN}Veuillez choisir une option : ${NC}"
+    echo -e "${YELLOW}[1]${NC} Définir les règles de pare-feu"
+    echo -e "${YELLOW}[2]${NC} Activer le pare-feu"
+    echo -e "${YELLOW}[3]${NC} Désactiver le pare-feu"
+    echo -e "${YELLOW}[4]${NC} Quitter"
+    echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
     read choix
 
     # Case pour faire un sous-menu pour les règles du pare-feu
