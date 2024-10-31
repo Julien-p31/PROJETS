@@ -12,7 +12,7 @@ while true; do
     echo -e "${YELLOW}[1]${NC} Installer un logiciel"
     echo -e "${YELLOW}[2]${NC} Désinstaller un logiciel"
     echo -e "${YELLOW}[3]${NC} Quitter"
-    echo -e "${YELLOW}Veuillez choisir une option : ${NC}"
+    echo -e "${GREEN}Veuillez choisir une option : ${NC}"
     read choix
 
     # Case pour faire un bloc avec les choix correspondants au menu 
