@@ -17,7 +17,7 @@ select choix in "${options[@]}"; do
            ;;
 
           3)
-            echo "Exit "
+            echo "Exit"
             break
             ;;
         *)
