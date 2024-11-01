@@ -101,7 +101,6 @@
 ````        
         sudo systemct1 restart systemd-networkd
 ````
-![image](https://cdn.discordapp.com/attachments/1292773669319344168/1296057608725332021/Configuration_IP_Serveur_Debian_12.bmp?ex=6710e735&is=670f95b5&hm=ccf08117afc7edb3fa2bf7eddfec59e882148198a1d9a931207a4d91d2e1a298&)
 
 ### **Configuration et installation du Protocole [NFS](https://fr.wikipedia.org/wiki/Network_File_System)**
  #### **Installation du paquet :**
@@ -226,5 +225,5 @@ sudo apt-get install nfs-kernel-server
 ````
 
 * ##### Vérification du bon fontionnement de PMS:
-````![image](https://cdn.discordapp.com/attachments/1292773669319344168/1296057609392230400/Verification_de_la_mise_en_marche_PLEX.bmp?ex=67138a35&is=671238b5&hm=fee72f48a07639989e092bcd198d4c4dd18cd8097afc5a521a987e8942567519&)`
+````
 ````
