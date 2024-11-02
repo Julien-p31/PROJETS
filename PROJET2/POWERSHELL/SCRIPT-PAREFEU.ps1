@@ -23,7 +23,7 @@ function Menu-ReglesPareFeu {
                 # Ajouter une règle de pare-feu
                 $ruleName = "NomDeLaRegle"
                 $ruleDescription = "Description de la règle"
-                $port = "8080" # Modifier le port selon vos besoins
+                $port = "8080" 
 
                 New-NetFirewallRule -DisplayName $ruleName -Description $ruleDescription -Direction Inbound -Protocol TCP -LocalPort $port -Action Allow
             }
