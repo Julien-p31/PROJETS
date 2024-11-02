@@ -16,11 +16,12 @@ function Menu-ReglesPareFeu {
         $choix_regles = Read-Host "Veuillez choisir une option "
 
         switch ($choix_regles) {
+
+            # Ajouter une règle de pare-feu
             "1" {
                 $regle = Read-Host "Entrer la règle à ajouter" 
                 Write-Host "Règle ajoutée : $regle`n" -f $GREEN
 
-                # Ajouter une règle de pare-feu
                 $ruleName = "NomDeLaRegle"
                 $ruleDescription = "Description de la règle"
                 $port = "8080" 
@@ -28,16 +29,16 @@ function Menu-ReglesPareFeu {
                 New-NetFirewallRule -DisplayName $ruleName -Description $ruleDescription -Direction Inbound -Protocol TCP -LocalPort $port -Action Allow
             }
 
+            # Supprimer une règle de pare-feu
             "2" {
                 $regle = Read-Host "Entrer la règle à supprimer"
                 Write-Host "Règle supprimée : $regle`n" -f $GREEN
 
-                # Supprimer une règle de pare-feu
                 $ruleName = "NomDeLaRegle"
-
                 Remove-NetFirewallRule -DisplayName $ruleName
             }
 
+            # Affiche les règles pare-feu actuelles
             "3" {
                 Write-Host "Règles de pare-feu actuelles :`n" -f $GREEN
                 Get-NetFirewallRule | Format-Table -Property DisplayName, Enabled, Action, Direction
@@ -48,11 +49,13 @@ function Menu-ReglesPareFeu {
                 return 
             }
 
+            # Quitte le script
             "x" {
                 Write-Host "Exit" -f $YELLOW
                 exit
             }
 
+            # Inique si erreur de saisie et relance le script
             default {
                 Write-Host "[Erreur]! Option invalide, veuillez réessayer !`n" -f $RED
             }
@@ -116,7 +119,7 @@ while ($true) {
             exit
         }
 
-        # Affiche erreur de saisie
+        # Inique si erreur de saisie et relance le script
         default {
             Write-Host "[Erreur]! Option invalide, veuillez réessayer !`n" -f $RED
         }
