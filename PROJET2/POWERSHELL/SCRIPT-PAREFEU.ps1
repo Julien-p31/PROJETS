@@ -4,6 +4,7 @@ $GREEN = "Green"
 $YELLOW = "Yellow"
 $NC = "White" # Aucune couleur
 
+# Fonction pour menu et choix des règles du pare-feu
 function Menu-ReglesPareFeu {
     while ($true) {
         Write-Host "------ MENU DES RÈGLES PARE-FEU ------`n" -f $GREEN
