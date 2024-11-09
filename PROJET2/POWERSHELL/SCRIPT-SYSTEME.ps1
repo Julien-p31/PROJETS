@@ -64,12 +64,6 @@ while ($true) {
             break
             }
 
-        # Quitter le script
-        "x" {
-            Write-Host "Exit" -f $YELLOW
-            exit
-            }
-
         # Inique si erreur de saisie et relance le script
         default {
             Write-Host "[Erreur]! Option invalide, veuillez réessayer !`n" -f $RED
