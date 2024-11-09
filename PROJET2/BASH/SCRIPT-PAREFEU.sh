@@ -22,7 +22,7 @@ while true; do
          # Boucle while true pour faire un menu sur les règles du pare-feu
      1)
           while true; do
-          echo -e "${GREEN}------ MENU DES RÈGLES PARE-FEU ------\n"
+          echo -e "\n${GREEN}------ MENU DES RÈGLES PARE-FEU ------\n"
           echo -e "${CYAN}[1]${NC} Ajouter une règle"
           echo -e "${CYAN}[2]${NC} Supprimer une règle"
           echo -e "${CYAN}[3]${NC} Afficher les règles actuelles"
