@@ -7,7 +7,7 @@ $NC = "White" # Aucune couleur
 
 # Boucle while true pour le menu gestion de logiciel
 while ($true) {
-    Write-Host "------ MENU GESTION LOGICIEL ------`n" -f $GREEN
+    Write-Host "`n------ MENU GESTION LOGICIEL ------`n" -f $GREEN
     Write-Host "[1] " -f $CYAN -nonewline; Write-Host " Installer un logiciel" -f $NC
     Write-Host "[2] " -f $CYAN -nonewline; Write-Host " Désinstaller un logiciel" -f $NC
     Write-Host "[3] " -f $CYAN -nonewline; Write-Host " Retour au menu principal`n" -f $NC
