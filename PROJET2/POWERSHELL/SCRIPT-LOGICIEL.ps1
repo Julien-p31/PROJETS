@@ -56,7 +56,6 @@ while ($true) {
         
         # Retour au menu principal 
         "3" {
-            Write-Host "`nExit`n" -f $YELLOW
             break
         }
         
