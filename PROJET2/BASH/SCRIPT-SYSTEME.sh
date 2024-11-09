@@ -4,63 +4,61 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
 NC='\033[0m' # Aucune couleur
 
 # Boucle while true pour faire un menu sur les informations systèmes
 while true; do
-    echo -e "${GREEN}------ MENU INFORMATION SYSTEME ------\n"
-    echo -e "${YELLOW}[1]${NC} Type de CPU, nombre de coeurs, etc.."
-    echo -e "${YELLOW}[2]${NC} Mémoire RAM totale"
-    echo -e "${YELLOW}[3]${NC} Utilisation de la RAM"
-    echo -e "${YELLOW}[4]${NC} Utilisation du disque"
-    echo -e "${YELLOW}[5]${NC} Utilisation du processeur "
-    echo -e "${YELLOW}[6]${NC} Retour au menu principal"
-    echo -e "${RED}[x]${NC}  Quitter\n"
-    echo -e "${GREEN}Veuillez choisir une option : ${NC}"
-    read choix
+    echo -e "\n${GREEN}------ MENU INFORMATION SYSTEME HARDWARE ------\n"
+    echo -e "${CYAN}[1]${NC} Type de CPU, nombre de coeurs, etc.."
+    echo -e "${CYAN}[2]${NC} Mémoire RAM totale"
+    echo -e "${CYAN}[3]${NC} Utilisation de la RAM"
+    echo -e "${CYAN}[4]${NC} Utilisation du disque"
+    echo -e "${CYAN}[5]${NC} Utilisation du processeur "
+    echo -e "${CYAN}[6]${NC} Retour au menu principal\n"
+    read -p "Veuillez choisir une option : " choix
     
     # Case pour faire un bloc avec les choix correspondants au menu 
     case $choix in
 
        # Type de CPU, nombres de coeurs, etc..
        1)
-            lscpu
+            echo ""
+            inxi -C
             echo ""
             ;;
 
         # Mémoire totale de la RAM
         2)
-            free -h | grep Mem | awk '{print $2}'
             echo ""
+            totalRam=$(free -b | grep Mem | awk '{printf "%.1f Go\n", $2 / (1024^3)}')
+            echo "La mémoire totale de la RAM est de $totalRam"
             ;;
 
         # Utilisation de la RAM
         3)
+            echo ""
             free -h
             echo ""
             ;;
             
         # Utilisation du disque
         4)
+            echo ""
             df -h
             echo ""
             ;;
             
         # Utilisation du processeur
         5)
-            top -b -n 1
+            echo ""
+            htop
             echo ""
             ;;
             
         # Retour au menu principal
         6)
             break
-            ;;
-
-        # Quitter le script
-        x)
-            echo -e "${YELLOW}Exit${NC}"
-            exit 0
             ;;
 
         # Inique si erreur de saisie et relance le script
