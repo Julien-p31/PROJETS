@@ -39,7 +39,7 @@ while true; do
    	    if [ $? -eq 0 ]; then
 	    	echo -e "\n${GREEN}*** Le logiciel $logiciel à été désinstallé avec succés ***${NC}\n"
             else
-                echo -e "\n${RED}*** ERREUR : Le logiciel $logiciel n'a pas été trouvé ou n'a pas pu être désinstallé. ***${NC}\n"
+                echo -e "\n${RED}*** ERREUR : Le logiciel $logiciel n'a pas été trouvé ou n'a pas pu être désinstallé ***${NC}\n"
             fi
           ;;
 
