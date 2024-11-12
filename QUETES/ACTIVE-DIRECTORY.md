@@ -1,4 +1,4 @@
-## Étape 1 : Créer une Unité d'Organisation (OU)
+## Étape 1 : Créer une Unité d'Organisation
 
 1. **Ouvrir le Gestionnaire Active Directory**
    - Aller dans le **Gestionnaire de serveur** et sélectionner **Outils** > **Utilisateurs et ordinateurs Active Directory**.
