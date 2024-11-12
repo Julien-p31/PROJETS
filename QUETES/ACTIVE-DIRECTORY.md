@@ -41,7 +41,7 @@
    - Cliquer sur **Suivant** puis **Terminer**.
 
 3. **Ajouter l'Utilisateur au Groupe Students**
-   - Dans **Wilders_students**, faire un clic droit sur le nouvel utilisateur créé (ex. : **John Doe**).
+   - Dans **Wilders_students**, faire un clic droit sur le nouvel utilisateur créé (ex. : **wcs.wilder**).
    - Sélectionner **Propriétés** > **Membre de** > **Ajouter**.
    - Dans le champ de recherche, saisir **Students** et cliquer sur **Vérifier les noms**.
    - Sélectionner le groupe **Students** et cliquer sur **OK**.
