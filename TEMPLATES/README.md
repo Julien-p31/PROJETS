@@ -4,7 +4,6 @@
 
 - [Guide d'installation](LIEN_GUIDE_INSTALLATION)
 - [Guide utilisateur](LIEN_GUIDE_UTILISATEUR)
-- [Documentation technique](LIEN_DOC_TECHNIQUE)
 
 ---
 
