@@ -30,6 +30,13 @@ Résumé du projet, de ses objectifs principaux et de ses fonctionnalités clés
 | **Semaine 2** | Rôle           | Rôle           | Rôle           | Rôle           |
 | **Semaine 3** | Rôle           | Rôle           | Rôle           | Rôle           |
 | **Semaine 4** | Rôle           | Rôle           | Rôle           | Rôle           |
+| **Semaine 5** | Rôle           | Rôle           | Rôle           | Rôle           |
+| **Semaine 6** | Rôle           | Rôle           | Rôle           | Rôle           |
+| **Semaine 7** | Rôle           | Rôle           | Rôle           | Rôle           |
+| **Semaine 8** | Rôle           | Rôle           | Rôle           | Rôle           |
+| **Semaine 9** | Rôle           | Rôle           | Rôle           | Rôle           |
+| **Semaine 10**| Rôle           | Rôle           | Rôle           | Rôle           |
+| **Semaine 11* | Rôle           | Rôle           | Rôle           | Rôle           |
 
 ---
 
