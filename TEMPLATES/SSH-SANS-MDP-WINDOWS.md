@@ -1,4 +1,4 @@
-# EXECUTER POWERSHELL EN ADMIN SUR LES DEUX MACHINES => toujours un mot de passe sur le client pour SSH OK sur Windows
+# EXECUTER POWERSHELL EN ADMIN SUR LES DEUX MACHINES
 
 ## 1. On vérifie les services clients :
 `get-service ssh-agent`
