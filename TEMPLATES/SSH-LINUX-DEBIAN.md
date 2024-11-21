@@ -1,4 +1,4 @@
-# Installation et Configuration de SSH sous Debian/Ubuntu
+# INSTALLATION ET CONFIGURATION DE SSH SOUS DEBIAN/UBUNTU
 
 ## 1. Installation de SSH
 ``sudo apt update``<br>
