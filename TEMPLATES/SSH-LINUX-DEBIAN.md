@@ -14,7 +14,8 @@
 ## 4. Configuration de SSH (facultatif)
 - Éditez le fichier de configuration :
   ``sudo nano /etc/ssh/sshd_config``
-- Modifications :
+  
+## Modifications :
 - PermitRootLogin no : décommenter et mettre "yes".
 - Sauvegardez et fermez le fichier (Ctrl + o pour sauvegarder puis Ctrl + x pour quitter le fichier).
 
