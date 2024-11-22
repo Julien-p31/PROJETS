@@ -30,7 +30,7 @@
 
 ### Modifications :
 
-``INTERFACESv4="eth0"``<br>
+``INTERFACESv4="enp0s3"``<br>
 ``INTERFACESv6=""``
 
 - Sauvegardez et fermez le fichier.
