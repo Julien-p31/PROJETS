@@ -29,9 +29,9 @@
 
 ---
 
-## 📝 Les requêtes réussies : `code 200`
-## 📝 Les erreurs : `code 404` 
-## 📝 Les adresses IP les plus fréquentes : `192.168.1.56`
+## 📝 Les requêtes réussies : `code 200 ✅`
+## 📝 Les erreurs : `code 404 ❌` 
+## 📝 Les adresses IP les plus fréquentes : `192.168.1.56 🌐`
 
 ---
 
