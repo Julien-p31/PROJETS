@@ -32,3 +32,7 @@
 ## 📝 Les requêtes réussies : `code 200`
 ## 📝 Les erreurs : `code 404` 
 ## 📝 Les adresses IP les plus fréquentes : `192.168.1.56`
+
+---
+
+## 📝 Tuto utilisé : ***https://friendhosting.net/fr/blog/install-apache-on-debian-11.php***
