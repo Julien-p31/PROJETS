@@ -62,71 +62,67 @@
 
 ---
 
-## 3. Configuration/Utilisation ⚙️
+<details>
+<summary><h1>⚙️ Installation des features sur Windows Server Core</h1></summary>
 
-### Cible 🎯 (A REMPLIR !)
-- Serveur **Windows Server Core** configuré avec **DHCP**, **DNS** et **Active Directory Domain Services (AD DS)**, relié à un domaine existant pour la redondance.
+- 📸 **Étape 1 :** Installation de la feature ``RSAT-AD-Tools``
+  
+![WINCOREF1](https://github.com/user-attachments/assets/d17c0a12-1ecd-485a-adef-92be7dd84294)<br>
 
-### Étapes de configuration/utilisation 🔧
+- 📸 **Étape 2 :** Installation de la feature ``AD-Domain-Services``
 
-#### 3.1. Configuration du rôle DHCP 🔄
-1. **Installation du rôle DHCP :**
-   - Ouvrir PowerShell en tant qu’administrateur sur le serveur Core.
-   - Exécuter la commande suivante pour installer le rôle DHCP :
-     ```powershell
-     Install-WindowsFeature -Name DHCP -IncludeManagementTools
-     ```
-2. **Configurer le serveur DHCP :**
-   - **Définir une étendue d'adresses IP :**
-     ```powershell
-     Add-DhcpServerv4Scope -Name "MainScope" -StartRange 172.18.1.100 -EndRange 172.18.1.200 -SubnetMask 255.255.255.0
-     ```
-   - **Activer le serveur DHCP :**
-     ```powershell
-     Set-Service -Name DHCPServer -StartupType Automatic
-     Start-Service DHCPServer
-     ```
-   - **Configurer les options DHCP (par exemple, passerelle, DNS) :**
-     ```powershell
-     Set-DhcpServerv4OptionValue -OptionId 3 -Value 172.18.255.254  # Passerelle
-     Set-DhcpServerv4OptionValue -OptionId 6 -Value 172.18.255.254 # Serveur DNS
-     ```
+![WINCOREF2](https://github.com/user-attachments/assets/6037209f-df25-4a5e-8271-4b253cf32668)<br>
 
-3. **Vérification du service DHCP :**
-   - 📸 **Résultat attendu :** Le service DHCP doit être actif et fournir des adresses IP aux clients.
+- 📸 **Étape 3 :** Installation de la feature ``DHCP``
 
-#### 3.2. Configuration du rôle DNS 🌐
-1. **Installation du rôle DNS :**
-   - Exécuter la commande suivante pour installer le rôle DNS :
-     ```powershell
-     Install-WindowsFeature -Name DNS -IncludeManagementTools
-     ```
-2. **Configurer DNS pour joindre le domaine principal :**
-   - Ajouter le serveur DNS du domaine existant dans la configuration DNS du serveur Core :
-     ```powershell
-     Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 172.18.255.252
-     ```
-3. **Vérification du service DNS :**
-   - 📸 **Résultat attendu :** Le serveur DNS doit résoudre les noms internes du domaine et diriger les requêtes vers le serveur DNS primaire du domaine.
+![WINCOREF3](https://github.com/user-attachments/assets/62aa6bdf-815f-45e6-a9c2-37170f2a896e)<br>
 
-#### 3.3. Configuration de Active Directory Domain Services (AD DS) 🔑
-1. **Installation d'Active Directory :**
-   - Installer le rôle AD DS en exécutant la commande suivante :
-     ```powershell
-     Install-WindowsFeature -Name AD-Domain-Services
-     ```
-2. **Promouvoir le serveur en contrôleur de domaine secondaire :**
-   - Exécuter la commande PowerShell suivante pour rejoindre un domaine existant :
-     ```powershell
-     Install-ADDSDomainController -DomainName "billu.com" -Credential (Get-Credential) -InstallDns:$true -NoGlobalCatalog:$false
-     ```
-   - **Rejoindre le domaine existant (réplication et redondance) :** 
-     Le serveur Core va se promouvoir en tant que **contrôleur de domaine secondaire**, ce qui permet de créer une redondance pour l'Active Directory.
-   
-3. **Vérification du service AD DS :**
-   - 📸 **Résultat attendu :** Le serveur devient contrôleur de domaine secondaire, et les utilisateurs et groupes sont répliqués depuis le contrôleur de domaine primaire.
+- 📸 **Étape 4 :** Installation de la feature ``DNS``
+  
+![WINCOREF4](https://github.com/user-attachments/assets/047bb5f2-ad42-4753-861b-f44d9a3dbd2b)<br>
 
-## 4. FAQ ❓
+- 📸 **Étape 5 :** Ajout du serveur core au domaine ``billu.com``
+
+![WINCOREF5](https://github.com/user-attachments/assets/74c5116b-2f68-4938-b2b3-585e30e0d495)<br>
+
+
+- 📸 **Étape 6 :** Connexion au domaine via le compte ``Administrateur du domaine billu.com``
+
+![WINCOREF6](https://github.com/user-attachments/assets/277faa22-b51a-412b-9f13-a6908ec2f28e)<br>
+
+- 📸 **Étape 7 :** Redémarrage pour validation de l'ajout du serveur core au domaine ``billu.com``
+
+![WINCOREF7](https://github.com/user-attachments/assets/830de9f6-244e-4b42-98ef-8a7dd6edb02c)<br>
+
+- 📸 **Étape 8 :** Après redémarrage choisir ``l'option 12`` pour changer de compte
+
+![WINCOREF8](https://github.com/user-attachments/assets/f0551182-5d9d-4fde-ac39-ef43ce383c09)<br>
+
+- 📸 **Étape 9 :** Choisir ``Other user`` puis faites entrer
+
+![WINCOREF9](https://github.com/user-attachments/assets/fd87bbc6-8d7a-48bb-b499-a97716217967)<br>
+
+- 📸 **Étape 10 :** Renseignez le nom du compte Administrateur avec le nom de domaine ``billu.com`` ainsi que le mot de passe puis faites entrer
+
+![WINCOREF10](https://github.com/user-attachments/assets/7f393ae9-9c62-4198-ac32-ce397420cf6d)<br>
+
+- 📸 **Étape 11 :** Tout est bon, vous voila connecter sur le domaine ``billu.com``
+
+![WINCOREF11](https://github.com/user-attachments/assets/cd4d7048-be8a-4b73-a23a-aa3aed3041c9)
+
+
+
+</details>
+
+---
+
+## ⚙️ CONFIGURATION DHCP ET DNS VOIR DIRECTEMENT SUR LE SERVEUR PRINCIPAL ===>
+
+https://github.com/WildCodeSchool/TSSR-2409-VERT-P3-G1-build-your-infra/blob/main/INSTALL%20ET%20CONFIG/Windows%20Server%202022.md
+
+---
+
+## 3. FAQ ❓
 - **Problème : Le service DHCP ne distribue pas d'adresses IP.**
   - **Solution :** Vérifiez si l'étendue DHCP est correctement configurée et si le service DHCP est bien démarré.
   
@@ -136,7 +132,7 @@
 - **Problème : Impossible de rejoindre le domaine.**
   - **Solution :** Vérifiez que le serveur Core peut communiquer avec le contrôleur de domaine principal et que les informations d'identification sont correctes.
 
-## 5. Optimisation 🏎️
+## 4. Optimisation 🏎️
 
 ### Choix du hardware 💻
 - Pour un serveur **Windows Server Core** avec DHCP, DNS et AD DS :
@@ -149,7 +145,7 @@
   - Configurer Windows Update pour effectuer des mises à jour automatiques.
   - Vérifiez les mises à jour de sécurité tous les mois et après chaque mise à jour majeure de Windows Server.
 
-## 6. Restauration rapide en cas de défaillance 🔄
+## 5. Restauration rapide en cas de défaillance 🔄
 
 ### Clone miroir 💾
 1. **Créer un clone miroir de Windows Server Core :**
