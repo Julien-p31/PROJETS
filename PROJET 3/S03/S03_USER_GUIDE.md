@@ -2,11 +2,11 @@
 <summary><h1> 🎯 Création de ticket sur un compte utilisateur via GLPI<h1></summary>
 <br>
   
-``📑 Connexion sur un compte utilisateur``
+📑 Connexion sur un compte utilisateur
 ---
 ![003](https://github.com/user-attachments/assets/7c46272c-778f-46fa-ba8d-31e5b8fd60f9)<br>
 
-``📑 Création d'un ticket``
+📑 Création d'un ticket
 ---
 ![004](https://github.com/user-attachments/assets/9c08904a-e19c-438d-99c0-643b0ed9fe45)<br>
 ---
@@ -20,7 +20,7 @@
 
 ---
 
-``📑 Réception de la solution et clos du ticket de l'utilisateur``
+📑 Réception de la solution et clos du ticket de l'utilisateur
 ---
 ![014](https://github.com/user-attachments/assets/ba16ef29-f360-40c5-8ecf-cdbb037c384e)<br>
 ---
