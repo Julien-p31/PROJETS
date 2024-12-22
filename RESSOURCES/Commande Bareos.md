@@ -1,4 +1,4 @@
-# Tutoriel et Récapitulatif des Commandes BConsole pour Bareos Server
+# Tutoriel et récapitulatif des commandes BConsole pour Bareos Server
 
 ## Introduction
 BConsole est l'interface en ligne de commande pour gérer et interagir avec un serveur Bareos. Ce guide couvre les commandes les plus utiles avec des explications détaillées, des exemples, et des conseils pour effectuer des opérations courantes comme la gestion des sauvegardes, des restaurations et des volumes.
