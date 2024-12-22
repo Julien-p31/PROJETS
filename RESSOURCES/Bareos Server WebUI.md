@@ -1,4 +1,4 @@
-# Guide de Configuration de l'interface WebUI de Bareos sur Debian/Ubuntu
+# Guide de configuration de l'interface WebUI de Bareos sur Debian/Ubuntu
 
 Ce guide adapte la documentation officielle de **Bareos WebUI** pour Debian et Ubuntu afin de garantir un fonctionnement optimal.
 
