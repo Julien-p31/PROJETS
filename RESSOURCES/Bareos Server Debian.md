@@ -1,4 +1,4 @@
-# Guide d'Installation et de Configuration de Bareos Community sur Debian
+# Guide d'installation et de configuration de Bareos community sur Debian
 
 Ce guide détaille l'installation de **Bareos Community Edition** sur une distribution Debian, ainsi que sa configuration initiale pour une utilisation fonctionnelle.
 
