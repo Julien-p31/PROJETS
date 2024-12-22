@@ -1,4 +1,4 @@
-# Tutoriel : Configuration d'un Client Bareos sous Linux
+# Tutoriel : Configuration d'un client Bareos sous Linux
 
 Ce guide décrit les étapes pour configurer un client Bareos sur Debian (sans sudo) et sur Ubuntu (avec sudo). Assurez-vous que votre serveur Bareos est correctement configuré avant de commencer.
 
