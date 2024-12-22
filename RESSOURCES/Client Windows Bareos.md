@@ -1,4 +1,4 @@
-# Tutoriel : Installation et Configuration d'un Client Bareos sur Windows (Interface Graphique)
+# Tutoriel : Installation et configuration d'un client Bareos sur Windows (Interface Graphique)
 
 Ce guide détaille les étapes pour installer et configurer un client Bareos sur un système Windows en utilisant l'interface graphique.
 
