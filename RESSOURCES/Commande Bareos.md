@@ -342,6 +342,3 @@ status dir
 | `messages`            | Afficher les logs récents.                         |
 | `reload`              | Recharger la configuration.                        |
 
----
-
-Pour plus de détails, référez-vous à la [documentation officielle Bareos](https://www.bareos.org/documentation.html).
