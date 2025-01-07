@@ -1,6 +1,6 @@
 ## 1 - Sécurisation des équipements d'interconnexions
 
-<p align="right"><a href="README.md">(Retourner au sommaire)</a></p>
+<p align="right"><a href="LAB-TSSR infrastructure réseau securisée sous CISCO Packet Tracer.md">(Retourner au sommaire)</a></p>
 
 **Description de l'étape :**  
 Nous utiliserons un switch pour cet exemple et nous essaierons de réaliser les étapes dans un ordre chronologique logique.
