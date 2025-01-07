@@ -32,7 +32,7 @@ Nous utiliserons un switch pour cet exemple et nous essaierons de réaliser les 
 `Switch(config-vlan)# name NomVlan99`  
 `Switch(config-vlan)# exit`  
 `Switch(config)# interface vlan 99`  
-`Switch(config-if)# ip address 192.168.100.250 255.255.255.0`  
+`Switch(config-if)# ip address 192.168.100.220 255.255.255.0`  
 `Switch(config-if)# no shutdown`  
 `Switch(config-if)# exit`  
 `Switch(config)# ip default-gateway 192.168.100.254`  
