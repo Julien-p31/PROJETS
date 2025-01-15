@@ -5,5 +5,5 @@
 | **Session**            | 5          | Gestion des connexions entre deux systèmes (établissement, maintien, et terminaison des sessions).   | NetBIOS, RPC                        | Logiciels (middleware, gestion de sessions) |
 | **Transport**          | 4          | Segmentation des données, gestion de la fiabilité, contrôle des erreurs, multiplexage.               | TCP, UDP                            | Pare-feu, routeurs avancés         |
 | **Réseau**             | 3          | Routage et adressage logique des paquets entre différents réseaux.                                   | IP, ICMP, RIP, OSPF                 | Routeurs, commutateurs Layer 3     |
-| **Liaison de données** | 2          | Communication directe entre appareils sur le même réseau, détection et correction d’erreurs.         | Ethernet, Wi-Fi (802.11), ARP       | Commutateurs, points d'accès Wi-Fi |
+| **Liaison de données** | 2          | Communication directe entre appareils sur le même réseau, détection et correction d’erreurs.         | Ethernet, Wi-Fi (IEEE 802.11), ARP       | Commutateurs, points d'accès Wi-Fi |
 | **Physique**           | 1          | Transmission des bits bruts sur un support physique (électrique, optique, radio).                    | Aucun (niveau matériel uniquement)  | Câbles, fibres optiques, antennes, hubs |
