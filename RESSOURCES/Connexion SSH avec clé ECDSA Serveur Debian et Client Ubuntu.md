@@ -1,12 +1,3 @@
-# Connexion SSH avec clé ECDSA (Serveur Debian - Client Ubuntu)
-
-Cette documentation vous guide pour configurer une connexion SSH sécurisée entre un serveur Debian et un client Ubuntu en utilisant des clés **ECDSA** pour une connexion sans mot de passe.
-
-## Prérequis
-- Serveur Debian
-- Client Ubuntu
-- Accès root ou sudo
-
 ## 1. Installer OpenSSH sur le serveur Debian<br>
 
 Sur le serveur Debian, installez le serveur SSH :
