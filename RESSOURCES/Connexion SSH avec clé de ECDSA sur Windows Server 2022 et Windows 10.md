@@ -1,5 +1,3 @@
-# Connexion SSH avec clé de chiffrement sur Windows Server 2022 et Windows 10
-
 ## 1. Installer OpenSSH Server sur le client
 
 - Ouvrir **Powershell** en tant qu'administrateur sur le client (Windows Server 2022 ou Windows 10).
