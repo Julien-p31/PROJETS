@@ -1,9 +1,9 @@
-| **Couche**        | **Numéro** | **Description**                                                                                     | **Exemples**                             |
-|--------------------|------------|-----------------------------------------------------------------------------------------------------|------------------------------------------|
-| **Application**    | 7          | Interface avec les applications utilisateur.                                                       | HTTP, FTP, SMTP                          |
-| **Présentation**   | 6          | Traduction des données (cryptage, compression, format).                                            | SSL/TLS, JPEG                            |
-| **Session**        | 5          | Gestion des sessions de communication (établissement, maintien, terminaison).                     | RPC, NetBIOS                             |
-| **Transport**      | 4          | Gestion du transport des données (fiabilité, contrôle des erreurs).                               | TCP, UDP                                 |
-| **Réseau**         | 3          | Routage des paquets entre réseaux.                                                                | IP, ICMP                                 |
-| **Liaison de données** | 2       | Communication entre appareils sur un même réseau physique, détection des erreurs.                 | Ethernet, Wi-Fi                          |
-| **Physique**       | 1          | Transmission physique des données (bits) sur le support matériel.                                 | Câbles, fibres optiques, signaux radio   |
+| **Couche**            | **Numéro** | **Rôle**                                                                                             | **Exemples de Protocoles**           | **Matériel Associé**               |
+|------------------------|------------|-------------------------------------------------------------------------------------------------------|--------------------------------------|------------------------------------|
+| **Application**        | 7          | Interface avec les applications utilisateur. Gestion des services réseau comme le mail ou le web.    | HTTP, FTP, SMTP, DNS                | Logiciels (navigateurs, clients FTP) |
+| **Présentation**       | 6          | Traduction, cryptage, et compression des données (format des données pour les couches supérieures).   | SSL/TLS, JPEG, PNG, ASCII           | Logiciels (bibliothèques de cryptage) |
+| **Session**            | 5          | Gestion des connexions entre deux systèmes (établissement, maintien, et terminaison des sessions).   | NetBIOS, RPC                        | Logiciels (middleware, gestion de sessions) |
+| **Transport**          | 4          | Segmentation des données, gestion de la fiabilité, contrôle des erreurs, multiplexage.               | TCP, UDP                            | Pare-feu, routeurs avancés         |
+| **Réseau**             | 3          | Routage et adressage logique des paquets entre différents réseaux.                                   | IP, ICMP, RIP, OSPF                 | Routeurs, commutateurs Layer 3     |
+| **Liaison de données** | 2          | Communication directe entre appareils sur le même réseau, détection et correction d’erreurs.         | Ethernet, Wi-Fi (802.11), ARP       | Commutateurs, points d'accès Wi-Fi |
+| **Physique**           | 1          | Transmission des bits bruts sur un support physique (électrique, optique, radio).                    | Aucun (niveau matériel uniquement)  | Câbles, fibres optiques, antennes, hubs |
