@@ -8,7 +8,9 @@ Réponse :
 
 ### 2. Citer différents logiciels permettant de prendre le contrôle à distance d’un équipement numérique et préciser leurs caractéristiques.
 
-Réponse :
+Réponse : - SSH =
+- Remote Desktop Protocol =
+- TeamViwer =
 
 ---
 
@@ -42,13 +44,13 @@ Réponse :
 
 ### 6. Un utilisateur ne peut pas consulter sa messagerie sur son smartphone professionnel. De quels renseignements avez-vous besoin pour lui configurer ?
 
-Réponse :
+Réponse : J'ai besoin de son nom et prénom puis je récupère le reste de ses informations directement dans mon AD.
 
 ---
 
 ### 7. Après différents tests, vous venez de résoudre un problème remonté par un utilisateur sur son poste de travail. Que devez-vous faire après avoir trouvé cette solution technique ?
 
-Réponse :
+Réponse : Prévenir l'utilisateur que le problème est résolue, lui expliquer simplement de quoi il s'agissait et comment ça été résolue. Clôturer le ticket de l'utilisateur. Puis renseigner la panne et la résolution dans une documentation ou autre endroit pour si jamais la panne reviens avoir directement la solution, qui peut être par la suite être transmise à l'utilisateur ou un autre membre de l'équipe l'IT.
 
 ---
 
@@ -60,7 +62,7 @@ Réponse :
 
 ### 9. Dans votre entreprise, les utilisateurs se plaignent de ne pas retrouver leurs fichiers et dossiers sur les “bureaux” des ordinateurs sur lesquels ils se connectent. Ils sont obligés de s’envoyer leurs documents par mail. Comment pouvez-vous faire évoluer cette situation ?
 
-Réponse :
+Réponse : Créer une GPO pour créer des Mapping Drive selon les besoins et mettre les droits selons les services correspondant aux besoins.
 
 ---
 
@@ -68,25 +70,25 @@ Réponse :
 
 ### 10. Quels sont les outils disponibles sur les serveurs Windows pour gérer les journaux d'événements ?
 
-Réponse :
+Réponse : Event Viewer Windows,
 
 ---
 
 ### 11. Qu'est-ce qu'une GPO ?
 
-Réponse :
+Réponse : C'est une stratégie de groupe, qui permet de déployer par exemple des règles pour les mots de passe, l'autorisation ou l'interdiction à certaines fonctionnalités, créer des mappings drives, etc..
 
 ---
 
 ### 12. Est-ce une bonne pratique de partager des fichiers ou des dossiers sur un partage réseau, en mettant des permissions NTFS sur des utilisateurs ?
 
-Réponse :
+Réponse : Oui, c'est une bonne pratique. Cela permet que tous les utilisateurs ayant les droits sur certains dossiers puissent les consulter en passant par le serveur. Cela permet donc de pouvoir gérer complètement les accès que ça soit de lecture ou d'écriture.
 
 ---
 
 ### 13. Si l'utilisateur jdoe existe sur un domaine Active Directory, sur une machine spécifique, utilisera-t-il le même bureau que l'utilisateur local jdoe ?
 
-Réponse :
+Réponse : Non, car la session de jdoe du domaine aura des règles propres au domaine, la sauvegarde de ses dossiers, fichiers, etc.., seront stocké uniquement sur la session du domaine. En local, sa session sera indépendante de celle du domaine.
 
 ---
 
@@ -208,19 +210,19 @@ VLAN Name                              Status      Ports
 
 Que peut-on dire des interfaces Gi0/3, Gi1/2, Gi1/3 ?
 
-Réponse :
+Réponse : Ce sont des interfaces GigabiteEthernet, Elles sont sur des VLANS qui sont active.
 
 ---
 
 ### Combien y-a-t’il de vlans ?
 
-Réponse :
+Réponse : Il y a 7 VLANS de créer actuellement.
 
 ---
 
 ### 31. Qu'est-ce qu'un trunk pour des vlans ?
 
-Réponse :
+Réponse : Cela permet de faire passer plusieurs VLANS sur un même lien.
 
 ---
 
