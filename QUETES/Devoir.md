@@ -1,54 +1,64 @@
 ## CCP1 - Assurer le support utilisateur en centre de service
 
-### De nouvelles stations de travail viennent d’être acquises par une entreprise. Cependant les disques sont de capacités insuffisantes. On souhaiterait les remplacer par des disques de 4 To minimum. Quelles sont les précautions et vérifications à prendre avant d’installer le système pour que ces derniers puissent être reconnus ?
+### 1. De nouvelles stations de travail viennent d’être acquises par une entreprise. Cependant les disques sont de capacités insuffisantes. On souhaiterait les remplacer par des disques de 4 To minimum. Quelles sont les précautions et vérifications à prendre avant d’installer le système pour que ces derniers puissent être reconnus ?
 
 Réponse :
 
 ---
 
-### Citer différents logiciels permettant de prendre le contrôle à distance d’un équipement numérique et préciser leurs caractéristiques.
+### 2. Citer différents logiciels permettant de prendre le contrôle à distance d’un équipement numérique et préciser leurs caractéristiques.
 
 Réponse :
 
 ---
 
-### Rédiger une note de service sous forme d’un email à destination des utilisateurs de votre entreprise les prévenant d’une opération de maintenance du service SI sur la base de données du serveur d’applications de l’entreprise (pendant cette période, la base de données ne sera pas accessible).
+### 3. Rédiger une note de service sous forme d’un email à destination des utilisateurs de votre entreprise les prévenant d’une opération de maintenance du service SI sur la base de données du serveur d’applications de l’entreprise (pendant cette période, la base de données ne sera pas accessible).
+
+Réponse : À destination de tous les utilisateurs de l'entreprise BILLU.
+
+Bonjour,
+
+Nous tenons à vous informer que lundi 03/02/2025 de 10h à 12h, le service SI sur la base de données du serveur d'applications de l'entreprise sera en maintenance et donc pendant cette période la base de donnes ne sera pas accessible.
+
+Nous vous remercions de la bonne réception de cette information.
+
+PS : pour toute question éventuelle du a la maintenance, merci de contacter directement le service IT à cette adresse : IT.Billu@billu.com
+
+Cordialement, L'équipe IT.
+
+---
+
+### 4. Vous devez former les utilisateurs à l’utilisation d’une solution de stockage de fichiers en ligne. Quels sont les points que vous évoquez dans votre document de présentation ?
 
 Réponse :
 
 ---
 
-### Vous devez former les utilisateurs à l’utilisation d’une solution de stockage de fichiers en ligne. Quels sont les points que vous évoquez dans votre document de présentation ?
+### 5. Quelle procédure est à réaliser pour récupérer un fichier supprimé par un utilisateur sur son ordinateur professionnel ?
 
 Réponse :
 
 ---
 
-### Quelle procédure est à réaliser pour récupérer un fichier supprimé par un utilisateur sur son ordinateur professionnel ?
+### 6. Un utilisateur ne peut pas consulter sa messagerie sur son smartphone professionnel. De quels renseignements avez-vous besoin pour lui configurer ?
 
 Réponse :
 
 ---
 
-### Un utilisateur ne peut pas consulter sa messagerie sur son smartphone professionnel. De quels renseignements avez-vous besoin pour lui configurer ?
+### 7. Après différents tests, vous venez de résoudre un problème remonté par un utilisateur sur son poste de travail. Que devez-vous faire après avoir trouvé cette solution technique ?
 
 Réponse :
 
 ---
 
-### Après différents tests, vous venez de résoudre un problème remonté par un utilisateur sur son poste de travail. Que devez-vous faire après avoir trouvé cette solution technique ?
+### 8. Pendant la pause déjeuner, presque tout le personnel de votre entreprise est absent des locaux. Vous devez passer en urgence un correctif de sécurité. Ce correctif demande un redémarrage des ordinateurs clients. Que faites-vous ?
 
 Réponse :
 
 ---
 
-### Pendant la pause déjeuner, presque tout le personnel de votre entreprise est absent des locaux. Vous devez passer en urgence un correctif de sécurité. Ce correctif demande un redémarrage des ordinateurs clients. Que faites-vous ?
-
-Réponse :
-
----
-
-### Dans votre entreprise, les utilisateurs se plaignent de ne pas retrouver leurs fichiers et dossiers sur les “bureaux” des ordinateurs sur lesquels ils se connectent. Ils sont obligés de s’envoyer leurs documents par mail. Comment pouvez-vous faire évoluer cette situation ?
+### 9. Dans votre entreprise, les utilisateurs se plaignent de ne pas retrouver leurs fichiers et dossiers sur les “bureaux” des ordinateurs sur lesquels ils se connectent. Ils sont obligés de s’envoyer leurs documents par mail. Comment pouvez-vous faire évoluer cette situation ?
 
 Réponse :
 
@@ -56,55 +66,55 @@ Réponse :
 
 ## CCP2 - Exploiter des serveurs Windows et un domaine Active Directory
 
-### Quels sont les outils disponibles sur les serveurs Windows pour gérer les journaux d'événements ?
+### 10. Quels sont les outils disponibles sur les serveurs Windows pour gérer les journaux d'événements ?
 
 Réponse :
 
 ---
 
-### Qu'est-ce qu'une GPO ?
+### 11. Qu'est-ce qu'une GPO ?
 
 Réponse :
 
 ---
 
-### Est-ce une bonne pratique de partager des fichiers ou des dossiers sur un partage réseau, en mettant des permissions NTFS sur des utilisateurs ?
+### 12. Est-ce une bonne pratique de partager des fichiers ou des dossiers sur un partage réseau, en mettant des permissions NTFS sur des utilisateurs ?
 
 Réponse :
 
 ---
 
-### Si l'utilisateur jdoe existe sur un domaine Active Directory, sur une machine spécifique, utilisera-t-il le même bureau que l'utilisateur local jdoe ?
+### 13. Si l'utilisateur jdoe existe sur un domaine Active Directory, sur une machine spécifique, utilisera-t-il le même bureau que l'utilisateur local jdoe ?
 
 Réponse :
 
 ---
 
-### Active Directory contient-il une base de données hiérarchique ou relationnelle ? Explique avec au moins un exemple.
+### 14. Active Directory contient-il une base de données hiérarchique ou relationnelle ? Explique avec au moins un exemple.
 
 Réponse :
 
 ---
 
-### Comment mettre en place une politique de mots de passe sur un domaine Active Directory ?
+### 15. Comment mettre en place une politique de mots de passe sur un domaine Active Directory ?
 
 Réponse :
 
 ---
 
-### Qu'est-ce qu'un objet Active Directory ?
+### 16. Qu'est-ce qu'un objet Active Directory ?
 
 Réponse :
 
 ---
 
-### Est-ce une bonne pratique de supprimer un compte utilisateur le lendemain du départ d'un collaborateur d'une société ?
+### 17. Est-ce une bonne pratique de supprimer un compte utilisateur le lendemain du départ d'un collaborateur d'une société ?
 
 Réponse :
 
 ---
 
-### Comment gérer l'administration d'un serveur core ?
+### 18. Comment gérer l'administration d'un serveur core ?
 
 Réponse :
 
@@ -112,55 +122,55 @@ Réponse :
 
 ## CCP3 - Exploiter des serveurs Linux
 
-### Sur les systèmes Linux, avec quel utilitaire peut-on partitionner des disques durs de plus de 2 To ?
+### 19. Sur les systèmes Linux, avec quel utilitaire peut-on partitionner des disques durs de plus de 2 To ?
 
 Réponse :
 
 ---
 
-### Sur un système Linux, que trouve-t'on dans les fichiers /etc/shadow, /etc/passwd, /etc/group ?
+### 20. Sur un système Linux, que trouve-t'on dans les fichiers /etc/shadow, /etc/passwd, /etc/group ?
 
 Réponse :
 
 ---
 
-### Est-ce que "systemctl start" et "systemctl enable" ont le même effet ?
+### 21. Est-ce que "systemctl start" et "systemctl enable" ont le même effet ?
 
 Réponse :
 
 ---
 
-### Est-ce que la commande dig sur Linux est la même chose que tracert sur Windows ?
+### 22. Est-ce que la commande dig sur Linux est la même chose que tracert sur Windows ?
 
 Réponse :
 
 ---
 
-### Quelle commande permet d'afficher les 20 dernières lignes des logs du système en temps réel ?
+### 23. Quelle commande permet d'afficher les 20 dernières lignes des logs du système en temps réel ?
 
 Réponse :
 
 ---
 
-### Que fait la commande suivante : usermod -a -G admin sthomas
+### 24. Que fait la commande suivante : usermod -a -G admin sthomas
 
 Réponse :
 
 ---
 
-### Un technicien a exécuté la commande suivante : chmod 777 startScript.sh . Est-ce une bonne idée ?
+### 25. Un technicien a exécuté la commande suivante : chmod 777 startScript.sh . Est-ce une bonne idée ?
 
 Réponse :
 
 ---
 
-### Est-ce que mount et umount sur Linux ont la même fonctionnalité que dism mount et dism umount sur windows ?
+### 26. Est-ce que mount et umount sur Linux ont la même fonctionnalité que dism mount et dism umount sur windows ?
 
 Réponse :
 
 ---
 
-### A quoi sert Samba sur Linux ? Donne son équivalent sur Windows.
+### 27. A quoi sert Samba sur Linux ? Donne son équivalent sur Windows.
 
 Réponse :
 
@@ -168,19 +178,19 @@ Réponse :
 
 ## CCP4 - Exploiter un réseau IP
 
-### Qu'est-ce qu'une topologie réseau ? Quels sont les 2 types de topologie ?
+### 28. Qu'est-ce qu'une topologie réseau ? Quels sont les 2 types de topologie ?
 
 Réponse :
 
 ---
 
-### Donne 5 protocoles courants, avec leur nom, leur fonction, ainsi que leur port par défaut. Donne leur équivalence en mode sécurisé avec les mêmes informations.
+### 29. Donne 5 protocoles courants, avec leur nom, leur fonction, ainsi que leur port par défaut. Donne leur équivalence en mode sécurisé avec les mêmes informations.
 
 Réponse :
 
 ---
 
-### Pour les lignes de commandes suivantes :
+### 30. Pour les lignes de commandes suivantes :
 
 ```
 VLAN Name                              Status      Ports
@@ -208,19 +218,19 @@ Réponse :
 
 ---
 
-### Qu'est-ce qu'un trunk pour des vlans ?
+### 31. Qu'est-ce qu'un trunk pour des vlans ?
 
 Réponse :
 
 ---
 
-### Quel est l’intérêt de faire des sous-réseaux du point de vue des tables de routage ?
+### 32. Quel est l’intérêt de faire des sous-réseaux du point de vue des tables de routage ?
 
 Réponse :
 
 ---
 
-### On a un réseau 132.45.0.0/16. On souhaite découper ce réseau en 8 sous-réseaux.
+### 33. On a un réseau 132.45.0.0/16. On souhaite découper ce réseau en 8 sous-réseaux.
 
 - a. Combien de bits supplémentaires sont nécessaires pour définir ces 8 sous-réseaux ?
 - b. Quel est le masque correspondant ?
