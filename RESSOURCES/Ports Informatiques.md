@@ -29,3 +29,10 @@
 | **BitTorrent**| 6881-6889 | Peer-to-peer File Sharing           |
 | **OpenVPN**   | 1194    | OpenVPN Protocol                       |
 | **VNC**       | 5900    | Virtual Network Computing              |
+| **DHCP server** | 67 | Dynamic Host Configuration protocol |
+| **DHCP client** | 68 | Dynamic Host Configuration protocol |
+| **SMB** | 445 TCP/137 UDP | Server Message Block | 
+| **NBName** | 137/UDP | NetBios |
+| **NBName** |137/TCP | NetBios |
+| **NBDatagram** | 138/UDP | NetBios |
+| **NBSession** | 139/TCP | NetBios |
