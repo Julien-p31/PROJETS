@@ -10,6 +10,7 @@ Outil d’analyse statique qui détecte :
 ✅ Erreurs de syntaxe et mauvaises pratiques  
 ✅ Problèmes de style et d’efficacité  
 💡 Il recommande **Write-Output** plutôt que **Write-Host** pour une meilleure gestion des logs.  
+L'utilisation de Write-Output permet une meilleure gestion des sorties, rendant les scripts plus modulaires, maintenables et conformes aux bonnes pratiques. Contrairement à Write-Host, qui se limite à l'affichage à l'écran, Write-Output permet la redirection, la capture et le traitement des données, offrant ainsi plus de flexibilité. 🚀
 
 ### 3. **Lynis** – Audit de sécurité pour Unix/Linux  
 Analyse et renforce la sécurité des systèmes avec :  
