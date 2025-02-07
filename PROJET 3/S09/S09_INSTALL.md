@@ -101,77 +101,207 @@ bash /tmp/sng_freepbx_debian_install.sh
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BILLU</title>
+    <title>BILLU - Logiciel de Facturation</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
     <style>
+        /* Animation du fond */
+        @keyframes bg-scrolling-reverse {
+            from { background-position: 0 0; }
+            to { background-position: 50px 50px; }
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('https://images6.alphacoders.com/120/1201406.jpg') no-repeat center center fixed;
-            background-size: cover;
+            font-family: Exo, Arial, sans-serif;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat;
+            background-size: 50px 50px;
+            animation: bg-scrolling-reverse 5s linear infinite;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
+
+        header, footer {
+            width: 100%;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 10px 0;
+            text-align: center;
+            position: absolute;
+            left: 0;
+        }
+
+        header {
+            top: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        footer {
+            bottom: 0;
+            font-size: 0.9rem;
+        }
+
+        .hamburger {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            width: 35px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .hamburger div {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 160px;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #28a745;
+            border-radius: 8px;
+        }
+
+        .menu.open {
+            right: 0;
+        }
+
         .container {
             text-align: center;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 40px 60px;
+            background: rgba(30, 30, 30, 0.8);
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 2s ease-in-out;
+            max-width: 400px;
         }
+
         h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
+
         p {
-            font-size: 1.5rem;
-            margin-top: 0;
-        }
-        .button {
-            margin-top: 20px;
-            padding: 15px 30px;
             font-size: 1.2rem;
-            color: white;
-            background-color: #28a745;
-            border: none;
+            margin-top: 10px;
+        }
+
+        .google-search {
+            background-color: rgba(20, 20, 20, 0.8);
+            padding: 20px;
             border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            margin-top: 30px;
         }
-        .button:hover {
+
+        .google-search input[type="text"] {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            width: 280px;
+            background: black;
+            color: white;
+        }
+
+        .google-search input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #28a745;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .google-search input[type="submit"]:hover {
             background-color: #218838;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenue chez BILLU !</h1>
-        <p>L'avenir de la facturation</p>
-        <a href="next.html" class="button">Enter</a>
+    <header>BILLU</header>
+    
+    <button class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <div class="menu" id="menu">
+        <a href="next.html">Services</a> 
+        <a href="games.html">Games</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html">Contact</a>
     </div>
+
+    <div class="container">
+        <h1>Bienvenue chez BILLU</h1>
+        <p>L'avenir de la facturation, simple et efficace.</p>
+    </div>
+
+    <div class="google-search">
+        <form method="GET" action="http://www.google.be/search">
+            <div align="center">
+		<a href="http://www.google.fr/">
+                    <img src="./pictures/gif_google.gif" border="0" alt="Logo Google" align="absmiddle" width="80">
+                </a>
+                <input type="text" name="q" size="31" maxlength="255" placeholder="Rechercher sur Google">
+                <input type="hidden" name="hl" value="fr">
+                <input type="submit" name="btnG" value="Rechercher">
+            </div>
+        </form>
+    </div>
+
+    <footer>&copy; 2025 BILLU. Tous droits réservés.</footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
+
 ```
 ---
 
@@ -185,116 +315,202 @@ bash /tmp/sng_freepbx_debian_install.sh
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation de BILLU</title>
+    <title>Dashboard BillU</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;600&display=swap');
+        
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('https://images8.alphacoders.com/120/1201407.jpg') no-repeat center center fixed;
-            background-size: cover;
+            font-family: 'Exo', sans-serif;
+            background-color: #1e1e1e;
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            flex-direction: column;
-        }
-
-        .container {
             text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            animation: fadeIn 2s ease-in-out;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
         }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        .header {
+            background: #222;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin: 10px 0;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
-        }
-
-        .highlight {
+        .header h1 {
+            margin: 0;
+            font-weight: 600;
             color: #ffd700;
+        }
+
+        .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .icon-wrapper {
+            background: #2a2a2a;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            text-align: center;
+            position: relative;
+            width: 150px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        .icon-wrapper:hover {
+            transform: scale(1.05);
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .status-dot {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: gray; /* Initial color */
+        }
+
+        .status-dot.up {
+            background-color: green;
+        }
+
+        .status-dot.down {
+            background-color: red;
+        }
+
+        .service-name {
+            font-size: 1rem;
+            margin: 10px 0;
             font-weight: bold;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .status-text {
+            font-size: 0.9rem;
+            color: #fff;
         }
 
-        .wave {
-            position: absolute;
+        .status-text.up {
+            color: #28a745;
+        }
+
+        .status-text.down {
+            color: #dc3545;
+        }
+
+        .footer {
+            background: #222;
+            padding: 15px;
+            position: fixed;
             bottom: 0;
-            left: 0;
             width: 100%;
-            height: 200px;
-            background: url('https://svgshare.com/i/tHx.svg') repeat-x;
-            animation: waveAnimation 10s linear infinite;
-        }
-
-        @keyframes waveAnimation {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-1600px);
-            }
-        }
-
-        /* Style du bouton */
-        .back-button {
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            background-color: #ffd700;
-            color: black;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #ffa500;
-            transform: scale(1.1);
-        }
-
-        .back-button:active {
-            transform: scale(1);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenue chez BILLU</h1>
-        <p>BillU, filiale du groupe international <span class="highlight">RemindMe</span>,
-            est spécialisée dans le développement de logiciels innovants, notamment de facturation.</p>
-        <p>Avec <span class="highlight">167 collaborateurs</span> et un siège situé dans le 20e arrondissement de Paris,
-            notre mission est de simplifier les processus financiers et d'augmenter l'efficacité opérationnelle de nos clients.</p>
-        <p>Répartie en <span class="highlight">9 départements</span>, notre équipe talentueuse mêle expertise en finance et en développement
-            logiciel pour fournir des solutions de pointe.</p>
 
-        <!-- Bouton pour retourner à la page index.html -->
-        <button class="back-button" onclick="window.location.href='index.html';">Retour à l'index</button>
+    <div class="header">
+        <h1>Dashboard BillU</h1>
     </div>
-    <div class="wave"></div>
+
+    <div class="icon-container" id="services-container">
+        <!-- Les services seront générés dynamiquement ici -->
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 BillU | Tous droits réservés</p>
+    </div>
+
+    <script>
+        const services = [
+            { name: 'pfSense', url: 'http://192.168.10.254/', img: 'https://wpcomputersolutions.com/wp-content/uploads/2018/07/pfsense-logo-e1534531558807.png' },
+            { name: 'GLPI', url: 'http://glpi.billu.com/glpi/', img: 'https://glpi-project.org/wp-content/uploads/2021/06/logo-glpi-bleu-1.png' },
+            { name: 'Passbolt', url: 'http://passbolt.billu.com/', img: 'https://static.cdnlogo.com/logos/p/97/passbolt.svg' },
+            { name: 'Graylog', url: 'http://graylog.billu.com:9000/', img: 'https://static.cdnlogo.com/logos/g/32/graylog.svg' },
+            { name: 'FreePBX', url: 'http://freepbx.billu.com/', img: 'https://cp.beget.com/shared/xisQQW8k-g5QWd77x9XCtcysQ5hIWg3I/logo_freepbx2x.png' },
+            { name: 'iRedMail', url: 'https://mail.billu.com/mail/', img: 'https://www.iredmail.org/images/logo.png' },
+            { name: 'Zabbix', url: 'http://zabbix.billu.com:8080/', img: 'https://ssd-disclosure.com/wp-content/uploads/2022/11/1_vloEha9mTCLM_SEnXdIUIw-300x300.png' },
+            { name: 'Guacamole Bastion', url: 'http://bastion.billu.com:8080/guacamole/#/', img: 'https://d7umqicpi7263.cloudfront.net/img/product/030b6dbb-cd7b-486d-af34-99d4924864a1.com/6fb7788920aacfd15ab8e000e0f750a3' },
+            { name: 'GitHub', url: 'https://github.com/WildCodeSchool/TSSR-2409-VERT-P3-G1-build-your-infra', img: 'https://static.cdnlogo.com/logos/g/69/github-icon.svg' },
+            { name: 'Mailo', url: 'https://www.mailo.com/', img: './pictures/Mailo_logo.png' }
+        ];
+
+        function createServiceCard(service) {
+            return `
+                <div class="icon-wrapper" data-service="${service.url}">
+                    <a href="${service.url}" target="_blank">
+                        <img class="icon" src="${service.img}" alt="${service.name}">
+                    </a>
+                    <div class="service-name">${service.name}</div>
+                    <div class="status-dot" id="status-${service.name}"></div>
+                    <div id="status-text-${service.name}" class="status-text">Vérification en cours...</div>
+                </div>
+            `;
+        }
+
+        async function checkServiceStatus(url) {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 5000); // timeout 5 sec
+
+            try {
+                const response = await fetch(url, {
+                    method: 'HEAD',
+                    mode: 'no-cors',
+                    signal: controller.signal
+                });
+                clearTimeout(timeoutId);
+                return response.ok || response.type === 'opaque';  // 'opaque' is needed for CORS requests
+            } catch (error) {
+                clearTimeout(timeoutId);
+                if (error.name === 'AbortError') {
+                    console.log(`Timeout for ${url}`);
+                }
+                return false;  // Si une erreur ou timeout, le service est hors ligne
+            }
+        }
+
+        async function updateDashboard() {
+            const container = document.getElementById('services-container');
+            container.innerHTML = '';
+
+            // Créer les cartes de services pour tous les services
+            services.forEach(service => {
+                container.innerHTML += createServiceCard(service);
+            });
+
+            // Vérifier le statut de chaque service
+            for (const service of services) {
+                try {
+                    const status = await checkServiceStatus(service.url);
+                    const statusElement = document.getElementById(`status-${service.name}`);
+                    const statusTextElement = document.getElementById(`status-text-${service.name}`);
+
+                    if (status) {
+                        statusElement.className = 'status-dot up';
+                        statusTextElement.className = 'status-text up';
+                        statusTextElement.textContent = `En ligne - Dernière vérification à ${new Date().toLocaleTimeString()}`;
+                    } else {
+                        statusElement.className = 'status-dot down';
+                        statusTextElement.className = 'status-text down';
+                        statusTextElement.textContent = `Hors ligne - Dernière vérification à ${new Date().toLocaleTimeString()}`;
+                    }
+                } catch (error) {
+                    console.error('Erreur lors de la vérification du service:', service.name, error);
+                }
+            }
+        }
+
+        // Mise à jour du dashboard toutes les 5 secondes
+        setInterval(updateDashboard, 5000);
+        updateDashboard();  // Lancer immédiatement la mise à jour
+    </script>
 </body>
 </html>
 ```
@@ -306,9 +522,10 @@ bash /tmp/sng_freepbx_debian_install.sh
 
 ## **Le serveur web est maintenant fonctionnel, sécurisé et accessible depuis l’extérieur grâce à un reverse proxy**. 🎉
 
-![WEB1](https://github.com/user-attachments/assets/ad358a8b-7293-42da-afeb-3af5321688d7)<br>
+![WEB1](https://github.com/user-attachments/assets/db406db2-6b30-493b-bc24-23189096cc4d)<br>
 
-![WEB2](https://github.com/user-attachments/assets/8b8961d5-1380-4638-a6cc-0e1d25783564)
+![WEB2](https://github.com/user-attachments/assets/3204d37a-6d85-4d56-981a-11aff3b07fad)
+
 
 </details>
 
